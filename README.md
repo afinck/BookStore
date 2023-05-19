@@ -22,4 +22,4 @@ I will not provide any support or bug fixes.
 
 ## License
 
-To be considered....
+GPLv3
