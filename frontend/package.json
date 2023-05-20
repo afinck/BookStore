@@ -1,7 +1,7 @@
 {
   "name": "book-api-ui",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,9 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^4.3.2",
+    "@sveltejs/vite-plugin-svelte": "^2.0.3",
+    "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
     "svelte": "^3.57.0",
-    "@sveltejs/vite-plugin-svelte": "^2.0.3"
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.2"
   },
   "dependencies": {
     "svelte-forms-lib": "^2.0.1"

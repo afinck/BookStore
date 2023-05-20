@@ -25,117 +25,40 @@
     }
 </script>
 
-<div class="frame">
+<div class="container w-64 mx-auto">
     <form on:submit={handleSubmit}>
-        <div class="form-group">
-            <div class="form-col-4">
-                <label for="title">Title</label>
-            </div>
-            <div class="form-col-6">
-                <input id="title" name="title" on:change={handleChange} />
-            </div>
-            <div class="form-col-4">
-                <label for="author">Author</label>
-            </div>
-            <div class="form-col-6">
-                <input id="author" name="author" on:change={handleChange} />
-            </div>
-            <div class="form-col-4">
-                <label for="language">Language</label>
-            </div>
-            <div class="form-col-6">
-                <input id="language" name="language" on:change={handleChange} />
-            </div>
-            <div class="form-col-4">
-                <label for="pages">Pages</label>
-            </div>
-            <div class="form-col-6">
-                <input
-                    id="pages"
-                    name="pages"
-                    type="number"
-                    on:change={handleChange}
-                />
-            </div>
-            <div class="form-col-4">
-                <label for="pages">Genre</label>
-            </div>
-            <div class="form-col-6">
-                <input id="genre" name="genre" on:change={handleChange} />
-            </div>
-            <div class="form-col-4">
-                <label for="pages">Publisher</label>
-            </div>
-            <div class="form-col-6">
-                <input
-                    id="publisher"
-                    name="publisher"
-                    on:change={handleChange}
-                />
-            </div>
-            <div class="form-col-4">
-                <label for="isbn">ISBN</label>
-            </div>
-            <div class="form-col-6">
-                <input id="isbn" name="isbn" on:change={handleChange} />
-            </div>
-        </div>
-        <div class="justify">
-            <button class="myButton" type="submit">Submit</button>
+        <label class="text-lg" for="title">Title:</label>
+        <input type="text" id="title" name="title" on:change={handleChange} />
+        <label class="text-lg" for="author">Author:</label>
+        <input type="text" id="author" name="author" on:change={handleChange} />
+        <label class="text-lg" for="language">Language:</label>
+        <input
+            type="text"
+            id="language"
+            name="language"
+            on:change={handleChange}
+        />
+        <label class="text-lg" for="pages">Pages:</label>
+        <input id="pages" name="pages" type="number" on:change={handleChange} />
+        <label class="text-lg" for="pages">Genre:</label>
+        <input type="text" id="genre" name="genre" on:change={handleChange} />
+        <label class="text-lg" for="pages">Publisher:</label>
+        <input
+            type="text"
+            id="publisher"
+            name="publisher"
+            on:change={handleChange}
+        />
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" on:change={handleChange} />
+        <div class="flex justify-center">
+            <button
+                class="border rounded-full px-6 py-2 my-4 bg-slate-100 text-lg"
+                type="submit">Submit</button
+            >
         </div>
     </form>
 </div>
 
 <style>
-    .frame {
-        position: relative;
-        margin-bottom: 20px;
-    }
-
-    .justify {
-        position: absolute;
-        left: 400px;
-        top: 195px;
-    }
-
-    .form-group {
-        display: flex;
-        flex-flow: row wrap;
-        margin: 1rem -1rem 1rem -1rem;
-        row-gap: 5px;
-        width: 30rem;
-    }
-
-    [class*="form-col"] {
-        flex: 0 1 100%;
-        padding: 0 5px;
-    }
-
-    @media (min-width: 576px) {
-        .form-col-4 {
-            flex: 0 0 30.33333%;
-            max-width: 30.33333%;
-            text-align: right;
-        }
-
-        .form-col-6 {
-            flex: 0 0 44.44444%;
-            max-width: 44.44444%;
-        }
-    }
-
-    input {
-        display: block;
-        width: 100%;
-        height: 25px;
-        border-radius: 5px;
-    }
-
-    label,
-    select {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        padding-top: 3px;
-    }
 </style>

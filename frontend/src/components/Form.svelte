@@ -29,130 +29,89 @@
     export let book;
 </script>
 
-<form on:submit={handleSubmit}>
-    <div class="form-group">
-        <div class="form-col-4">
-            <label for="title">Title</label>
+<div class="container flex justify-center mx-2">
+    <form on:submit={handleSubmit}>
+        <label class="font-bold py-1" for="title">Title:</label>
+        <input
+            class="block"
+            type="text"
+            id="title"
+            name="title"
+            on:change={handleChange}
+            bind:value={book.title}
+        />
+
+        <label class="font-bold py-1" for="author">Author:</label>
+
+        <input
+            class="block"
+            type="text"
+            id="author"
+            name="author"
+            on:change={handleChange}
+            bind:value={book.author}
+        />
+        <label class="font-bold py-1" for="language">Language:</label>
+
+        <input
+            class="block"
+            type="text"
+            id="language"
+            name="language"
+            on:change={handleChange}
+            bind:value={book.language}
+        />
+
+        <label class="font-bold py-1" for="pages">Pages:</label>
+
+        <input
+            class="block"
+            id="pages"
+            name="pages"
+            type="number"
+            on:change={handleChange}
+            bind:value={book.pages}
+        />
+
+        <label class="font-bold py-1" for="pages">Genre:</label>
+
+        <input
+            class="block"
+            type="text"
+            id="genre"
+            name="genre"
+            on:change={handleChange}
+            bind:value={book.genre}
+        />
+
+        <label class="font-bold py-1" for="pages">Publisher:</label>
+
+        <input
+            class="block"
+            type="text"
+            id="publisher"
+            name="publisher"
+            on:change={handleChange}
+            bind:value={book.publisher}
+        />
+        <label class="font-bold py-1" for="isbn">ISBN:</label>
+
+        <input
+            class="block"
+            type="text"
+            id="ISBN"
+            name="ISBN"
+            on:change={handleChange}
+            bind:value={book.ISBN}
+        />
+        <div class="my-2 flex justify-center">
+            <button
+                class="border rounded-full px-6 py-2 my-2 bg-slate-100 text-lg"
+                type="submit">Submit</button
+            >
         </div>
-        <div class="form-col-6">
-            <input
-                id="title"
-                name="title"
-                on:change={handleChange}
-                bind:value={book.title}
-            />
-        </div>
-        <div class="form-col-4">
-            <label for="author">Author</label>
-        </div>
-        <div class="form-col-6">
-            <input
-                id="author"
-                name="author"
-                on:change={handleChange}
-                bind:value={book.author}
-            />
-        </div>
-        <div class="form-col-4">
-            <label for="language">Language</label>
-        </div>
-        <div class="form-col-6">
-            <input
-                id="language"
-                name="language"
-                on:change={handleChange}
-                bind:value={book.language}
-            />
-        </div>
-        <div class="form-col-4">
-            <label for="pages">Pages</label>
-        </div>
-        <div class="form-col-6">
-            <input
-                id="pages"
-                name="pages"
-                type="number"
-                on:change={handleChange}
-                bind:value={book.pages}
-            />
-        </div>
-        <div class="form-col-4">
-            <label for="pages">Genre</label>
-        </div>
-        <div class="form-col-6">
-            <input
-                id="genre"
-                name="genre"
-                on:change={handleChange}
-                bind:value={book.genre}
-            />
-        </div>
-        <div class="form-col-4">
-            <label for="pages">Publisher</label>
-        </div>
-        <div class="form-col-6">
-            <input
-                id="publisher"
-                name="publisher"
-                on:change={handleChange}
-                bind:value={book.publisher}
-            />
-        </div>
-        <div class="form-col-4">
-            <label for="isbn">ISBN</label>
-        </div>
-        <div class="form-col-6">
-            <input
-                id="ISBN"
-                name="ISBN"
-                on:change={handleChange}
-                bind:value={book.ISBN}
-            />
-        </div>
-    </div>
-    <button class="myButton" type="submit">Submit</button>
-</form>
+    </form>
+</div>
 
 <style>
-    .form-group {
-        display: flex;
-        flex-flow: row wrap;
-        margin: 1rem 0rem 1rem 0rem;
-        row-gap: 5px;
-        width: 25rem;
-    }
-
-    [class*="form-col"] {
-        flex: 0 1 100%;
-        padding: 0 5px;
-    }
-
-    @media (min-width: 576px) {
-        .form-col-4 {
-            flex: 0 0 30.33333%;
-            max-width: 30.33333%;
-            text-align: right;
-        }
-
-        .form-col-6 {
-            flex: 0 0 44.44444%;
-            max-width: 44.44444%;
-        }
-    }
-
-    input {
-        display: block;
-        width: 100%;
-        height: 25px;
-        border-radius: 5px;
-        font-size: medium;
-    }
-
-    label,
-    select {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        padding-top: 3px;
-    }
 </style>

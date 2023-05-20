@@ -1,6 +1,7 @@
 <script>
     import { dataStore } from "../store";
     import Card from "./Card.svelte";
+    import Display from "./Display.svelte";
     import Form from "./Form.svelte";
     export let book;
 
@@ -24,11 +25,13 @@
 </script>
 
 <Card>
-    <div class="flex">
-        <button class="myButton" on:click={() => (toggle = !toggle)}
-            >{book.title}</button
+    <hr class="my-2" />
+    <div class="flex justify-between items-center">
+        <button
+            class="bg-slate-50 rounded-full p-2 px-4 border-2 border-slate-200"
+            on:click={() => (toggle = !toggle)}>{book.title}</button
         >
-        <div class="delete">
+        <div class="">
             <a href="#top" on:click={() => onDelete(book._id)}>
                 <i class="gg-remove" />
             </a>
@@ -36,17 +39,12 @@
     </div>
     {#if toggle}
         {#if !edit}
-            <div class="flex">
-                <div class="card">
-                    <div>by <b>{book.author}</b></div>
-                    <div>available in: <b>{book.language}</b></div>
-                    <div>Genre: <b>{book.genre}</b></div>
-                    <div>Pages: <b>{book.pages}</b></div>
-                    <div>Published by: <b>{book.publisher}</b></div>
-                    <div>ISBN: <b>{book.ISBN}</b></div>
-                </div>
-                <button class="center myButton" on:click={() => (edit = !edit)}
-                    >Edit</button
+            <hr class="m-2" />
+            <div class="flex justify-between">
+                <Display {book} />
+                <button
+                    class="self-end h-10 bg-slate-50 px-4 border-2 border-slate-200 rounded-full"
+                    on:click={() => (edit = !edit)}>Edit</button
                 >
             </div>
         {:else}
@@ -56,18 +54,6 @@
 </Card>
 
 <style>
-    .delete {
-        align-self: center;
-        row-gap: 25px;
-    }
-
-    .card {
-        width: 250px;
-        margin-top: 5px;
-        padding: 10px;
-        text-align: left;
-    }
-
     .gg-remove {
         box-sizing: border-box;
         position: relative;

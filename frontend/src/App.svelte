@@ -16,41 +16,35 @@
   let newBook = false;
 </script>
 
-<div class="container">
-  <div class="center">
-    <h2>Your Book Library</h2>
+<div class="container mx-auto">
+  <div class="font-sans text-base text-center m-2">
+    <h2 class="font-bold text-lg">Your Book Library</h2>
     <p>All your books neatly tucked away digitally.</p>
   </div>
   <hr />
-  <div class="new">
-    <button class="myButton" on:click={() => location.reload()}
-      >{amount} Books</button
+  <div class="flex justify-around m-3">
+    <button
+      class="bg-slate-50 rounded-full p-2 px-4 border-2 border-slate-200"
+      on:click={() => location.reload()}>{amount} Books</button
     >
-    <button class="myButton" on:click={() => (search = !search)}>Search</button>
-    <button class="myButton" on:click={() => (newBook = !newBook)}>New</button>
+    <button
+      class="bg-slate-50 rounded-full p-2 px-4 border-2 border-slate-200"
+      on:click={() => (search = !search)}>Search</button
+    >
+    <button
+      class="bg-slate-50 rounded-full p-2 px-4 border-2 border-slate-200"
+      on:click={() => (newBook = !newBook)}>New</button
+    >
   </div>
 
-  <div class="list">
-    {#if newBook}
-      <hr />
-      <New />
-    {/if}
-    {#if search && !newBook}
-      <hr />
+  {#if newBook}
+    <hr />
+    <New />
+  {/if}
+  {#if search && !newBook}
+    <hr />
 
-      <Search />
-    {/if}
-  </div>
-  <BookList />
+    <Search />
+  {/if}
 </div>
-
-<style>
-  .center {
-    text-align: center;
-  }
-  .new {
-    margin: 20px 20px;
-    display: flex;
-    justify-content: space-between;
-  }
-</style>
+<BookList />
