@@ -9,7 +9,7 @@
 
 ## Disclaimer
 
-I just created this littel app for fun and to get familiar with [Svelte](https://svelte.dev) Javascript Framework, [Vite](https://vitejs.dev) and [Docker](https://docker.com).
+I just created this littel app for fun and to get familiar with [Svelte](https://svelte.dev) Javascript Framework, [Vite](https://vitejs.dev), [Tailwind](tailwindcss.com) and [Docker](https://docker.com).
 
 This is not a production ready application whatsoever.
 I will not provide any support or bug fixes.
@@ -17,8 +17,7 @@ I will not provide any support or bug fixes.
 ## Missing
 
 - Proper error handling and input validation.
-- Cooler looks. ;-) I'm not a creative person.
-- Automatic ISBN resolver
+- Automatic ISBN resolver maybe.
 
 ## License
 
