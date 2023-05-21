@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     env_file: ./.env
     volumes:
-      - /Users/andreas/.data:/data/db
+      - $DOCKER_USER_DIR/.data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=$MONGODB_USER
       - MONGO_INITDB_ROOT_PASSWORD=$MONGODB_PASSWORD
@@ -42,7 +42,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+      - $WEBAPP_LOCAL_PORT:$WEBAPP_DOCKER_PORT
     networks:
       - frontend
 
